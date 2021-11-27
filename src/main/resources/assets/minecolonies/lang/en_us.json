@@ -132,6 +132,8 @@
   "minecolonies.config.suggestbuildtoolplacement.comment": "Suggest build tool usage when trying to place a building without the build tool.",
   "minecolonies.config.foodmodifier": "Food Modifier",
   "minecolonies.config.foodmodifier.comment": "Food consumption modifier.",
+  "minecolonies.config.showeatmessages": "Show Eating Messages",
+  "minecolonies.config.showeatmessages.comment": "Display a message whenever a colonist consumes food.",
   "minecolonies.config.canplayerusertpcommand": "Can Players Use the RTP Command",
   "minecolonies.config.canplayerusertpcommand.comment": "Should players be allowed to use the /mc rtp command?",
   "minecolonies.config.canplayerusecolonytpcommand": "Can Players Use the Colony TP Command",
@@ -1042,6 +1044,7 @@
 
   "com.minecolonies.coremod.pirates.sailing.away": "A pirate ship %s of %s just sailed away to search for another victim.",
   "com.minecolonies.coremod.cook.serve.player": "%s: Here Governor, take this food!",
+  "com.minecolonies.coremod.food.message": "%s ate food %s",
 
   "item.minecolonies.santa_hat": "Santa Hat",
 

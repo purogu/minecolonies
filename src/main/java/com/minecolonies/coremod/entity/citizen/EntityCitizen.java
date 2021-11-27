@@ -828,6 +828,7 @@ public class EntityCitizen extends AbstractEntityCitizen implements IThreatTable
     {
         if (citizenData != null)
         {
+            //aaa
             citizenData.decreaseSaturation(citizenColonyHandler.getPerBuildingFoodCost());
             citizenData.markDirty();
         }
@@ -993,6 +994,7 @@ public class EntityCitizen extends AbstractEntityCitizen implements IThreatTable
     @Override
     public boolean isOkayToEat()
     {
+        //aaa
         return !getCitizenSleepHandler().isAsleep() && getDesiredActivity() != DesiredActivity.SLEEP && (citizenJobHandler.getColonyJob() == null
                                                                                                            || citizenJobHandler.getColonyJob().canAIBeInterrupted());
     }

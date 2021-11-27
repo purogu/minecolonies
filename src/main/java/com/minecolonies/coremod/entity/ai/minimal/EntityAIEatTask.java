@@ -25,7 +25,9 @@ import com.minecolonies.coremod.entity.SittingEntity;
 import com.minecolonies.coremod.entity.citizen.EntityCitizen;
 import com.minecolonies.coremod.network.messages.client.ItemParticleEffectMessage;
 import com.minecolonies.coremod.util.AdvancementUtils;
+import com.minecolonies.coremod.MineColonies;
 import net.minecraft.entity.ai.goal.Goal;
+import net.minecraft.client.Minecraft;
 import net.minecraft.item.AirItem;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
@@ -36,6 +38,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TranslationTextComponent;
 
 import java.util.EnumSet;
+
+
+import com.ldtteam.structurize.util.LanguageHandler;
 
 import static com.minecolonies.api.research.util.ResearchConstants.SATURATION;
 import static com.minecolonies.api.util.ItemStackUtils.CAN_EAT;
@@ -283,6 +288,10 @@ public class EntityAIEatTask extends Goal
 
 
         final Food itemFood = stack.getItem().getFoodProperties();
+
+        if(MineColonies.getConfig().getServer().showEatMessages.get()) {
+            LanguageHandler.sendPlayerMessage(Minecraft.getInstance().player, "com.minecolonies.coremod.food.message", citizenData.getName(), stack.getDisplayName());
+        }
 
         final Item containerItem = stack.getItem().getCraftingRemainingItem();
 

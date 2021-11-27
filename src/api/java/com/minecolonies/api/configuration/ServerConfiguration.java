@@ -50,6 +50,7 @@ public class ServerConfiguration extends AbstractConfiguration
     public final ForgeConfigSpec.IntValue     minThLevelToTeleport;
     public final ForgeConfigSpec.BooleanValue suggestBuildToolPlacement;
     public final ForgeConfigSpec.DoubleValue  foodModifier;
+    public final ForgeConfigSpec.BooleanValue showEatMessages;
     public final ForgeConfigSpec.IntValue     diseaseModifier;
     public final ForgeConfigSpec.BooleanValue forceLoadColony;
     public final ForgeConfigSpec.IntValue     colonyLoadStrictness;
@@ -196,6 +197,7 @@ public class ServerConfiguration extends AbstractConfiguration
         minThLevelToTeleport = defineInteger(builder, "minthleveltoteleport", 3, 0, 5);
         suggestBuildToolPlacement = defineBoolean(builder, "suggestbuildtoolplacement", true);
         foodModifier = defineDouble(builder, "foodmodifier", 1.0, 0.1, 100);
+        showEatMessages = defineBoolean(builder, "showeatmessages", false);
         diseaseModifier = defineInteger(builder, "diseasemodifier", 5, 1, 100);
         forceLoadColony = defineBoolean(builder, "forceloadcolony", false);
         colonyLoadStrictness = defineInteger(builder, "colonyloadstrictness", 3, 1, 15);
